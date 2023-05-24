@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfSvg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSvg"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <DrawingImage x:Key="SvgDrawingImage">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                    <DrawingGroup Opacity="1">
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M3,9.11011L3,14.8801C3,17.0001,3,17.0001,5,18.3501L10.5,21.5301C11.33,22.0101,12.68,22.0101,13.5,21.5301L19,18.3501C21,17.0001,21,17.0001,21,14.8901L21,9.11011C21,7.00011,21,7.00011,19,5.65011L13.5,2.47011C12.68,1.99011,11.33,1.99011,10.5,2.47011L5,5.65011C3,7.00011,3,7.00011,3,9.11011z">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF292D32" Thickness="2.4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M12,15C13.6569,15 15,13.6569 15,12 15,10.3431 13.6569,9 12,9 10.3431,9 9,10.3431 9,12 9,13.6569 10.3431,15 12,15z">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF292D32" Thickness="2.4" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="1" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </Window.Resources>
+
+    <Grid Background="Bisque">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="{StaticResource SvgDrawingImage}" Width="24" Height="24" Margin="0 0 6 0 "/>
+            <TextBlock Text="设置" FontSize="20" Foreground="Black" TextAlignment="Center" VerticalAlignment="Center" FontWeight="Black"/>
+        </StackPanel>
+    </Grid>
+
+</Window>
